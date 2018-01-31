@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="type_header">
+      <ion-list  class="type_select">
+        <ion-item>
+          <ion-label>类型选择</ion-label>
+          <ion-select [(ngModel)]="gaming">
+            <ion-option value="test01">测试1</ion-option>
+            <ion-option value="test02">测试2</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+  </div>
+  <div class="type_list">
+    <ion-list>
+      <button ion-item *ngFor="let item of typeList" (click)="itemSelected(item)">
+        {{ item.value }}
+      </button>  
+    </ion-list>
+  </div>
+</ion-content>
